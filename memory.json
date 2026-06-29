@@ -1,0 +1,68 @@
+[
+    {
+        "role": "user",
+        "content": "Coimbatore"
+    },
+    {
+        "role": "assistant",
+        "content": null,
+        "refusal": null,
+        "reasoning": null,
+        "tool_calls": [
+            {
+                "type": "function",
+                "index": 0,
+                "id": "call_r40QPmsdlquvIGRHXn0dmTiX",
+                "function": {
+                    "name": "get_weather",
+                    "arguments": "{\"city\":\"Coimbatore\"}"
+                }
+            }
+        ]
+    },
+    {
+        "role": "tool",
+        "tool_call_id": "call_r40QPmsdlquvIGRHXn0dmTiX",
+        "name": "get_weather",
+        "content": "{\"city\": \"Coimbatore\", \"temperature\": 30.58, \"feels_like\": 31.76, \"humidity\": 49, \"weather\": \"broken clouds\", \"wind_speed\": 5.71}"
+    },
+    {
+        "role": "assistant",
+        "content": "The current weather in Coimbatore is 30.6\u00b0C with broken clouds. It feels a bit warmer at 31.8\u00b0C, which might be nice for a stroll. The humidity level is at 49%, so it's relatively comfortable out there. Additionally, there's a gentle breeze with a wind speed of 5.7 m/s, perfect for a pleasant outdoor experience!",
+        "refusal": null,
+        "reasoning": null
+    },
+    {
+        "role": "user",
+        "content": "Chennai"
+    },
+    {
+        "role": "assistant",
+        "content": null,
+        "refusal": null,
+        "reasoning": null,
+        "tool_calls": [
+            {
+                "type": "function",
+                "index": 0,
+                "id": "call_E1WybxDlhF6zuEp3ySE7WKbB",
+                "function": {
+                    "name": "get_weather",
+                    "arguments": "{\"city\":\"Chennai\"}"
+                }
+            }
+        ]
+    },
+    {
+        "role": "tool",
+        "tool_call_id": "call_E1WybxDlhF6zuEp3ySE7WKbB",
+        "name": "get_weather",
+        "content": "{\"city\": \"Chennai\", \"temperature\": 36.97, \"feels_like\": 43.97, \"humidity\": 49, \"weather\": \"broken clouds\", \"wind_speed\": 2.24}"
+    },
+    {
+        "role": "assistant",
+        "content": "The current weather in Chennai is quite warm at 37\u00b0C, and it feels even hotter at 44\u00b0C! There are broken clouds in the sky, which might provide occasional respite from the sun. The humidity is at 49%, so be prepared for a bit of stickiness. There's a light breeze with a wind speed of 2.2 m/s, which might offer some relief. Stay hydrated and enjoy your day!",
+        "refusal": null,
+        "reasoning": null
+    }
+]
