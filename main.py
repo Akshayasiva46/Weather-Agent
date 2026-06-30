@@ -11,11 +11,10 @@ load_dotenv()
 
 API_KEY = os.getenv("OPENROUTER_API_KEY")
 
-if not API_KEY:
-    raise RuntimeError(
-        "OPENROUTER_API_KEY is missing. Create a .env file (see .env.example) "
-        "and put your key in it."
-    )
+API_KEY_ERROR_MESSAGE = (
+    "OPENROUTER_API_KEY is missing. Create a .env file (see .env.example) "
+    "and put your key in it."
+)
 
 MODEL = "openai/gpt-4o-mini"
 
@@ -75,6 +74,8 @@ TOOLS = [
 # LLM CALL
 # -----------------------------
 def call_llm(messages):
+    if not API_KEY:
+        raise RuntimeError(API_KEY_ERROR_MESSAGE)
 
     headers = {
         "Authorization": f"Bearer {API_KEY}",
@@ -132,6 +133,8 @@ def run_tool(tool_call):
 # AGENT LOOP
 # -----------------------------
 def weather_agent(user_input):
+    if not API_KEY:
+        return API_KEY_ERROR_MESSAGE
 
     memory = load_memory()
 
